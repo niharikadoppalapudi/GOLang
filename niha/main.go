@@ -23,7 +23,7 @@ func RegisterUser() {
 		fmt.Scan(&LName)
 		//user = UserInfo{FName: FName, LName: LName}
 		Mk := make(map[UserInfo]string)
-		strArray[k] = &UserInfo{FName, LName}
+		strArray[] = &UserInfo{FName, LName}
 		Mk[*strArray[k]] = "Balance Amount:"
 		fmt.Println(Mk)
 
