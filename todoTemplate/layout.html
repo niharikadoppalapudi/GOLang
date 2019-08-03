@@ -1,0 +1,12 @@
+<h1>{{.PageTitle}}</h1>
+<ul>
+    {{range.Todos}}
+    {{if.Done}}
+    <li class="Done"><h2>"Completed Task:"</h2></li>
+    {{.Title}}
+    {{else}}
+<h2>"Pending TODO:"</h2>
+<li>{{.Title}}</li>
+    {{end}}
+    {{end}}
+</ul>
