@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	f()
 	fmt.Println("Returned normally from f.")
+	defer fmt.Println("Defer in main F'n")
 }
 
 func f() {
@@ -19,13 +20,14 @@ func f() {
 }
 
 func g(i int) {
-	if i > 3 {
+	if i > 1 {
 		fmt.Println("Panicking!")
 		panic(fmt.Sprintf("%v", i))
 
 	}
 	defer fmt.Println("Defer in g", i)
 	fmt.Println("Printing in g", i)
+	defer fmt.Println("Defer statement will be executed?")
 	g(i + 1)
 
 }
